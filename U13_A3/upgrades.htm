@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title> Mobile World Station</title>
+<style>
+.image-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+   
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #0000FF;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #00000;
+  color: white;
+}
+
+.topnav a.active {
+  background-color: #0000FF;
+  color: black;
+}
+topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  }
+ 
+  .topnav .search-container button:hover {
+  background: #ccc;
+}
+
+
+
+@media screen and (max-width: 800px) {
+  .topnav a, .topnav input[type=text] {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 17px;
+  }
+ 
+   .topnav input[type=text] {
+    border: 2px solid #ccc;  
+  }
+
+body{
+      font-family: Arial,Helvetia,sans-serif;
+ Background-color:#fbfbfb;
+ max-width:850px;, /* Use max-width for fluid behavior*/
+ margin 0 auto; /* A shorthand for centered margins*/
+ padding: 20px; /* Add padding to prevent content from touching the screen edges*/
+    }
+
+h1 {
+  color:#026633;
+  }
+ 
+ p{
+   
+color:#02361C
+
+}
+
+a:link{color:#03300;}
+a:visited {color:#02361C;}
+a:hover{color:#026633;}
+
+}
+
+        .form-box {
+            width: 450px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            border: 2px solid #1e90ff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(30, 144, 255, 0.3);
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #1e90ff;
+        }
+
+        label {
+            font-weight: bold;
+            color: #003366;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #1e90ff;
+            border-radius: 4px;
+            margin-top: 4px;
+        }
+
+        textarea {
+            resize: none;
+        }
+
+        .section {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-bottom: 1px solid #cce0ff;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #1e90ff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0b63c7;
+        }
+
+.gallery {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 500px;
+    max-height: 400px;
+    background-color: #f0f6ff;
+    border-left: 3px solid #1e90ff;
+    padding: 15px;
+    box-sizing: border-box;
+    overflow-y: auto;
+    border-radius: 8px 0 0 8px;
+    box-shadow: -2px 2px 8px rgba(0,0,0,0.1);
+    cursor: grab;
+    transition: top 0.3s ease; /* smooth snapping */
+}
+
+.gallery.dragging {
+    opacity: 0.9;
+    cursor: grabbing;
+    transition: none; /* disable transition while dragging */
+}
+
+}
+
+.gallery h3 {
+    text-align: center;
+    color: #1e90ff;
+    margin-top: 0;
+}
+
+.slideshow-container { position: relative; }
+.slide { display: none; }
+.slide img {
+    width: 100%;
+    border-radius: 6px;
+    border: 2px solid #cce0ff;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+.slide img:hover { transform: scale(1.05); border-color: #1e90ff; }
+.fade { animation: fadeEffect 1.5s; }
+@keyframes fadeEffect { from {opacity:0.4;} to {opacity:1;} }
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+    body { padding-right: 0; }
+    .gallery { display: none; }
+    .image-container { flex-direction: column; align-items: center; }
+}
+
+</style>
+</head>
+
+<body>
+<div class="image-container">
+    <img src="images/mobilelogo.png" alt="logo">
+    <img src="images/mobilebanner.png" alt="banner">
+</div>
+<nav>
+
+   <p>
+  <div class="topnav">
+  <a href="index.htm">Homepage</a>
+  <a href="mobile.htm">Mobile Phones</a>
+  <a href="accessories.htm"> Accessories</a>
+  <a href="service.htm"> Service</a>
+  <a  href="about.htm"> About us</a>
+  <a   href="brands.htm"> Phone brands</a>
+  <a class="active" href="upgrades.htm"> Upgrades</a>
+  <a href="contact.htm"> Contact us </a>
+  <form action="/action_page.php">
+  <input type="text" placeholder="Search...">
+  <button type="sumbit"> Submit</button>
+  </div>
+</p>
+
+<h1>Upgrades </h1>
+
+<P> Phone upgrades refer to improvements made to mobile phones to enhance performance,
+        features, security, and overall user experience. These upgrades can be software-based,
+        hardware-based, or feature-based.</P>
+       <iframe width="560" height="315" src="https://www.youtube.com/embed/IWLz3Gmm6ig?si=Cj_9aVa0UoR5-_7L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+ <h3>Software Upgrades</h3>
+    <p>Software upgrades include updates to the phone’s operating system, such as Android or iOS updates.</p>
+    <ul>
+        <li>Improved performance and stability</li>
+        <li>New features and tools</li>
+        <li>Better battery optimization</li>
+        <li>Enhanced security and privacy protection</li>
+        <li>Bug fixes and system improvements</li>
+    </ul>
+   
+     <h3>Hardware Upgrades</h3>
+    <p>Hardware upgrades focus on physical improvements found in newer phone models.</p>
+    <ul>
+        <li>Faster processors for smoother performance</li>
+        <li>Improved camera systems and image quality</li>
+        <li>Larger and brighter displays</li>
+        <li>Increased storage and RAM</li>
+        <li>Longer-lasting batteries and faster charging</li>
+   
+  
+
+   
+   
+     <h3>Connectivity Upgrades</h3>
+    <p>Connectivity upgrades improve network speed and device communication.</p>
+    <ul>
+        <li>5G network support for faster internet speeds</li>
+        <li>Improved Wi-Fi and Bluetooth versions</li>
+        <li>Better GPS accuracy and signal strength</li>
+    </ul>
+   
+     <h3>Security Upgrades</h3>
+    <p>Security upgrades help protect user data and privacy.</p>
+    <ul>
+        <li>Regular security patches</li>
+        <li>Improved fingerprint and face recognition</li>
+        <li>Stronger encryption and privacy controls</li>
+    </ul>
+   
+     <h3>Why Phone Upgrades Matter</h3>
+    <ul>
+        <li>Better phone performance</li>
+        <li>Access to the latest features</li>
+        <li>Improved security and privacy</li>
+        <li>Compatibility with new apps and technology</li>
+   
+    </ul>
+   <a href="https://www.apple.com/uk/"> Apple website</a> <a href="https://www.android.com/intl/en_uk/"> Android website</a>
+   
+</div>
+<div class="gallery">
+    <h3>New Releases </h3>
+    <div class="slideshow-container">
+        <div class="slide fade"><img src="images/iphonenew.jpg" alt="Phone 1"></div>
+        <div class="slide fade"><img src="images/pixelnew.jpg" alt="Phone 2"></div>
+        <div class="slide fade"><img src="images/androidnew.png" alt="Phone 3"></div>
+        
+    </div>
+</div>
+
+
+<script>
+let slideIndex = 0;
+function showSlides() {
+    let slides = document.getElementsByClassName("slide");
+    for (let i = 0; i < slides.length; i++) { slides[i].style.display = "none"; }
+    slideIndex++;
+    if(slideIndex > slides.length) { slideIndex = 1; }
+    slides[slideIndex-1].style.display = "block";
+    setTimeout(showSlides, 3000);
+}
+showSlides();
+</script>
+<script>
+let gallery = document.querySelector('.gallery');
+let isDragging = false;
+let startY, startTop;
+
+
+gallery.addEventListener('mousedown', function(e) {
+    isDragging = true;
+    startY = e.clientY;
+    startTop = gallery.offsetTop;
+    gallery.classList.add('dragging');
+    e.preventDefault();
+});
+
+
+document.addEventListener('mousemove', function(e) {
+    if (!isDragging) return;
+    let dy = e.clientY - startY;
+    let newTop = startTop + dy;
+    
+    newTop = Math.max(0, Math.min(window.innerHeight - gallery.offsetHeight, newTop));
+    gallery.style.top = newTop + 'px';
+    gallery.style.transform = 'translateY(0)'; 
+});
+
+
+document.addEventListener('mouseup', function() {
+    if (isDragging) {
+        isDragging = false;
+        gallery.classList.remove('dragging');
+       
+        let centerTop = (window.innerHeight - gallery.offsetHeight) / 2;
+        gallery.style.top = centerTop + 'px';
+    }
+});
+
+
+gallery.addEventListener('touchstart', function(e) {
+    isDragging = true;
+    startY = e.touches[0].clientY;
+    startTop = gallery.offsetTop;
+});
+document.addEventListener('touchmove', function(e) {
+    if (!isDragging) return;
+    let dy = e.touches[0].clientY - startY;
+    let newTop = startTop + dy;
+    newTop = Math.max(0, Math.min(window.innerHeight - gallery.offsetHeight, newTop));
+    gallery.style.top = newTop + 'px';
+    gallery.style.transform = 'translateY(0)';
+});
+document.addEventListener('touchend', function() {
+    if (isDragging) {
+        isDragging = false;
+        gallery.classList.remove('dragging');
+        let centerTop = (window.innerHeight - gallery.offsetHeight) / 2;
+        gallery.style.top = centerTop + 'px';
+    }
+});
+</script>
+    </nav>
+</body>
+</html>
